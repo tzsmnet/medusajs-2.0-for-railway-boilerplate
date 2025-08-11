@@ -189,7 +189,7 @@ const CartDropdown = ({
                       size="large"
                       data-testid="go-to-cart-button"
                     >
-                      Go to cart
+                      Kosár megtekintése
                     </Button>
                   </LocalizedClientLink>
                 </div>

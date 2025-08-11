@@ -13,14 +13,15 @@ export const convertToLocale = ({
   currency_code,
   minimumFractionDigits,
   maximumFractionDigits,
-  locale = "en-US",
+  locale = "hu-HU",
 }: ConvertToLocaleParams) => {
   return currency_code && !isEmpty(currency_code)
     ? new Intl.NumberFormat(locale, {
         style: "currency",
         currency: currency_code,
-        minimumFractionDigits,
-        maximumFractionDigits,
+        minimumFractionDigits:0,
+        maximumFractionDigits:0,
+        useGrouping: true,
       }).format(amount)
     : amount.toString()
 }
