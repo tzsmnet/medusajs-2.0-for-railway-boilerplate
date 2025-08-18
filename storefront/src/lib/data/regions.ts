@@ -19,7 +19,8 @@ export const retrieveRegion = cache(async function (id: string) {
 
 const regionMap = new Map<string, HttpTypes.StoreRegion>()
 
-export const getRegion = cache(async function (countryCode: string) {
+export const getRegion = cache(async function () {
+  const countryCode = 'hu';
   try {
     if (regionMap.has(countryCode)) {
       return regionMap.get(countryCode)
